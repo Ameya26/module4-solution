@@ -16,14 +16,20 @@
     // Home page
     .state('home', {
       url:'/',
-      template: '<div>In the home route </div>'
+      templateUrl: 'src/templates/home.template.html'
     })
 
     // categories
     .state('categories', {
       url:'/categories',
-      template: '<div>Inside the categories</div>'
+      templateUrl: 'src/templates/menu-categories.template.html',
+      controller: 'MenuListController as menuList'
+      // resolve:{
+      //   items:['MenuDataService', function (MenuDataService) {
+      //     return MenuDataService.getAllCategories();
+      //   }]
+      // }
     });
-    
+
   }
 })();

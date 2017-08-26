@@ -3,7 +3,9 @@
 
   angular.module('MenuApp')
   .component('categories', {
-    template: "<div>Hi from categories component</div>"
+    templateUrl: 'src/templates/categories.template.html',
+    bindings: {
+      items: '<'
+    }
   });
-
 })();

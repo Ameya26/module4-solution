@@ -9,14 +9,13 @@
 
   function MenuDataService($http, ApiBasePath) {
     var service = this;
-    console.log("Inside menu data service class");
+
 
     service.getAllCategories = function () {
       var response = $http({
         method: "GET",
         url: (ApiBasePath + "/categories.json")
       });
-
       return response;
     };
 
